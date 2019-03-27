@@ -1,9 +1,9 @@
 /* Header Parallax Element Style*/ 
 .paral {
-    min-height: 600px;
+    min-height: 400px;
     background-attachment: fixed;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 79%;
     }
 
     /* Paragraph for Parallax Section */ 
@@ -16,7 +16,7 @@
      
 /* Heading for Parallax Section */ 
 .paral h1 {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(238, 237, 235, 0.8);
     font-size: 60px;
     text-align: center;
     padding-top: 60px;
@@ -28,6 +28,11 @@
 
 /* Remove Bottom Margin from Jumbotron */
 .jumbotron{margin-bottom: 0;}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
 
 /* Footer */
 .wn-footer {
