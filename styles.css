@@ -28,7 +28,7 @@
 .paralsec { background-image: url("Images/rowing.jpg")}
 
 /* Remove Bottom Margin from Jumbotron */
-.jumbotron{margin-bottom: 0;}
+.jumbotron-fluid {margin: 0;}
 
 /* Navbar */
 .navbar {
