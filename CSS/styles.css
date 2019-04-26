@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    background: #222;
+}
+
+.container {
+ width: 85%;
+ margin: 0 auto;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    right: 8%;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 10px 0;
+    color: #fff
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #333;
+    
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 20px;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #333;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.hello {
+    background-image: url("../Images/rowing-2.jpg");
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 12em 0;
+}
+
+.hello h1 {
+    text-align: center;
+    color: #fff;
+}
