@@ -2,7 +2,7 @@
 
 <html land="en">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!--Global site tag (gtag.js) - Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137050311-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -11,51 +11,55 @@
             gtag('config', 'UA-137050311-1');
         </script>
       
-        <!-- Required meta tags -->
+        <!--Required meta tags-->
         <title>Daniel Lowry</title>
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <meta name="Description" content="I'm Daniel Lowry an aspiring software developer currently studying bachelors degree in Computer Science at the University of Strathclyde Glasgow.">
-		    <meta name="Keywords" content="Daniel, Lowry, Rowing, Strathclyde, Computers, Computer Science, Belfast">
+		<meta name="Keywords" content="Daniel, Lowry, Rowing, Strathclyde, Computers, Computer Science, Belfast">
         <meta name="Author" content="Daniel Lowry">
-        
-        <!--Font-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <!--Required meta tags-->
 
         <!--CSS-->
         <link rel="stylesheet" href="CSS/styles.css">
 
         <!--Javascript-->
         <script src="JS/script.js"></script>
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!--Parallax.js-->
+        <script src="JS/parallax.min.js"></script>
     </head>
 
     <body>
        <div class="site">
 
            <header>
-               <div class="container">
                 <h1 class="logo"><a href="#">Daniel Lowry</a></h1>
-
-                   <nav>
-                       <ul>
-                           <li><a href="#">Home</a></li>
-                           <li><a href="#">Button 2</a></li>
-                           <li><a href="#">Button 3</a></li>
-                           <li><a href="#">Button 4</a></li>
-                           <li><a href="#">Button 5</a></li>
-                       </ul>
-                   </nav>
-
-        
-               </div>
+                <input type="checkbox" class="nav-toggle" id="nav-toggle">
+                <nav>
+                    <ul>
+                        <li><a href="#">Computer Science</a></li>
+                        <li><a href="#">Rowing</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Christian Union</a></li>
+                    </ul>
+                </nav>
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
            </header>
 
-           <section class="hello">
-                <h1>Hello World!</h1>
-           </section>
-            
+           <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="Images/rowing-2.jpg">
+                <div class="hero">
+                    <h1 class="hello">Hello!</h1>
+                </div>
+           </div>
+
        </div>
     </body>
 </html>

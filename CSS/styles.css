@@ -1,21 +1,230 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --background: rgb(34, 34, 34);
+    --nav-text-color: #fff;
+    --accent-color: #FFD600
 }
 
-.site {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
     background: #222;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    
 }
 
-.container {
+.content {
+    height: 200vh;
+    background-color: #222;
+    display: grid;
+    place-items: center;
+}
+
+
+/* nav styles start here */
+
+header {
+    /*position: absolute;*/
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+header a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+}
+ 
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.parallax {
+    min-height: 400px;
+    background: transparent;
+    position: relative;
+}
+
+.hello {
+    margin: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-color);
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+@media screen and (min-width: 1113px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: .5fr auto minmax(600px, 10fr) .5fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
+    .logo a {
+        position: relative;
+    }
+
+    .logo a:hover {
+        color: var(--accent-color);
+    }
+
+    .logo a::before {
+        content: '';
+        display: block;
+        height: 2px;
+        background: var(--accent-color);
+        position: absolute;
+        top: 1.2em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 2px;
+        background: var(--accent-color);
+        position: absolute;
+        top: 1.2em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+}
+
+/* .container {
  width: 85%;
  margin: 0 auto;
 }
@@ -97,4 +306,4 @@ nav a:hover::before {
 .hello h1 {
     text-align: center;
     color: #fff;
-}
+} */
