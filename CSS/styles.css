@@ -161,7 +161,7 @@ nav a:hover {
 
     header {
         display: grid;
-        grid-template-columns: .5fr auto minmax(600px, 10fr) .5fr;
+        grid-template-columns: 1fr auto minmax(600px, 5fr) 1fr;
     }
 
     .logo {
@@ -191,7 +191,18 @@ nav a:hover {
     }
 
     nav {
-        all: unset;
+        /*all: unset; (unsupported in Edge - uncomment when Edge is dead)*/
+
+        /*Edge support start*/
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        /*Edge support end*/
+
         grid-column: 3/4;
         display: flex;
         justify-content: flex-end;
@@ -231,87 +242,3 @@ nav a:hover {
         transform: scale(1,1);
     }
 }
-
-/* .container {
- width: 85%;
- margin: 0 auto;
-}
-
-header {
-    position: relative;
-}
-
-nav {
-    position: absolute;
-    right: 8%;
-}
-
-.logo {
-    position: absolute;
-    margin: 0;
-    padding: 10px 0;
-    color: #fff
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.logo a:hover {
-    color: #333;
-    
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 20px;
-    position: relative;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    color: #333;
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #333;
-
-    position: absolute;
-    top: 0;
-    width: 0%;
-
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
-.hello {
-    background-image: url("../Images/rowing-2.jpg");
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 12em 0;
-}
-
-.hello h1 {
-    text-align: center;
-    color: #fff;
-} */
